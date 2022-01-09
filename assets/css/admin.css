@@ -1,0 +1,67 @@
+.icon-btn {
+  cursor: pointer;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.text-danger {
+  color: #cc1818;
+}
+
+.flex-fill {
+  flex: 1;
+}
+
+.button.is-destructive {
+  color: #cc1818 !important;
+  border-color: #cc1818 !important;
+  background-color: rgba(204, 24, 24, 0.05);
+}
+.button.is-destructive:hover, .button.is-destructive:active, .button.is-destructive:focus {
+  color: #710d0d !important;
+  border-color: #710d0d !important;
+  background-color: rgba(204, 24, 24, 0.1);
+}
+
+.repeater-field .rows {
+  padding: 0 0 1rem;
+}
+.repeater-field .rows .row {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+  padding: 0.75rem 0;
+  border-bottom: solid 1px #bbb;
+}
+.repeater-field .rows .row.empty-row {
+  display: none;
+}
+.repeater-field .rows .row .fields {
+  flex: 1;
+  display: flex;
+  margin-right: 1rem;
+}
+.repeater-field .rows .row .fields .field {
+  margin: 0 0.5rem;
+  display: inline-flex;
+}
+.repeater-field .rows .row .fields .field:first-child {
+  margin-left: 0;
+}
+.repeater-field .rows .row .fields .field:last-child {
+  margin-right: 0;
+}
+.repeater-field .rows .row .fields .field > * {
+  display: inline-block;
+  margin: auto;
+}
+.repeater-field .rows .row .fields .field label {
+  margin-right: 0.5rem;
+}
+.repeater-field .rows .row .fields .field .icon-btn {
+  margin-right: 0.5rem;
+}
+.repeater-field .rows .row .fields .field .icon-btn:last-child {
+  margin-right: 0;
+}

@@ -1,0 +1,37 @@
+footer {
+    .footer-nav {
+        background-color: #108796;
+        color: white;
+
+        .brand {
+            img {
+                height: 70px;
+            }
+        }
+        
+        .social {
+            margin: auto;
+            margin-left: 0;
+
+            a {
+                margin: auto .5rem;
+                display: inline-block;
+
+                transition: transform .2s;
+
+                &:hover,
+                &:active, 
+                &:focus {
+                    transform: scale(1.25);
+                }
+
+                &:first-child {
+                    margin-left: 0;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

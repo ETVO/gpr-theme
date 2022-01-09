@@ -1,0 +1,43 @@
+// Import partials
+@import "partials/header";
+@import "partials/footer";
+
+// Import helpers
+@import "form";
+@import "util";
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+body {
+    overflow-y: scroll !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f2f2f4;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: #596b74;
+    cursor: pointer;
+    transition: background-color .2s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #3f4f57;
+}

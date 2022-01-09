@@ -1,0 +1,31 @@
+.tlink {
+    color: inherit !important;
+    text-decoration: none;
+    transition: color .2s;
+
+    &.hover {
+        &-primary {
+            &:hover,
+            &:active,
+            &:focus {
+                color: var(--bs-primary);
+            }
+        }
+
+        &-light {
+            &:hover,
+            &:active,
+            &:focus {
+                color: var(--bs-light);
+            }
+        }
+
+        &-dark {
+            &:hover,
+            &:active,
+            &:focus {
+                color: var(--bs-dark);
+            }
+        }
+    }
+}
