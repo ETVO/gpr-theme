@@ -100,14 +100,24 @@ class BS_Menu_Walker extends Walker_Nav_Menu
         $attributes .= !empty($item->xfn) ? ' rel="' . esc_attr($item->xfn) . '"' : '';
         $attributes .= !empty($item->url) ? ' href="' . esc_attr($item->url) . '"' : '';
 
-        $active_class = ($item->current || $item->current_item_ancestor || in_array("current_page_parent", $item->classes, true) || in_array("current-post-ancestor", $item->classes, true)) ? 'active' : '';
-        $nav_link_class = ($depth > 0) ? 'dropdown-item ' : 'nav-link ';
-        $attributes .= ($args->walker->has_children) ? ' class="' . $nav_link_class . $active_class . ' dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"' : ' class="' . $nav_link_class . $active_class . '"';
+        $is_not_excluded = !is_404() && !is_search() && !in_array(get_post_type(), ['exame', 'especialista', 'convenio']);
 
+        $active_class = ($is_not_excluded && ($item->current || $item->current_item_ancestor || in_array("current_page_parent", $item->classes, true) || in_array("current-post-ancestor", $item->classes, true))) 
+            ? 'active' : '';
+        $nav_link_class = ($depth > 0) ? 'dropdown-item ' : 'nav-link ';
+        $attributes .= ' class="' . $nav_link_class . $active_class . '"';
+
+        
         $item_output = $args->before;
         $item_output .= '<a' . $attributes . '>';
         $item_output .= $args->link_before . apply_filters('the_title', $item->title, $item->ID) . $args->link_after;
         $item_output .= '</a>';
+        if($args->walker->has_children) {
+            $toggle_attributes = ' class="dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"';
+            $item_output .= '<a' . $toggle_attributes . '>';
+            $item_output .= '<span class="visually-hidden">Toggle Dropdown</span>';
+            $item_output .= '</a>';
+        }
         $item_output .= $args->after;
 
         $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);

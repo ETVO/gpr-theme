@@ -29,3 +29,40 @@
         }
     }
 }
+
+.dropdown {
+
+    .nav-link {
+        display: inline-block !important;
+    }
+
+    .dropdown-toggle {
+        
+        &::after {
+
+            cursor: pointer;
+            font-family: 'bootstrap-icons';
+            content: '\f282';
+            line-height: 1;
+            vertical-align: -0.1em;
+            -webkit-text-stroke: 1px inherit;
+            
+            border: none;
+            padding-right: 0;
+
+        }
+    }
+
+    .dropdown-menu {
+        padding: 0 !important;
+
+        .menu-item {
+            margin: 0;
+
+            a {
+                transition: background-color 0.2s;
+                padding: .5rem 1rem;
+            }
+        }
+    }
+}

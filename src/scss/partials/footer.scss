@@ -1,26 +1,32 @@
+$footer-bg: #108796;
+$footer-fg: white;
+$footer-fg-hover: rgba(#fff, 0.5);
+
 footer {
     .footer-nav {
-        background-color: #108796;
-        color: white;
+        background-color: $footer-bg;
+        color: $footer-fg;
 
         .brand {
+            display: flex;
             img {
-                height: 70px;
+                margin: auto 0;
+                height: 60px;
             }
         }
-        
+
         .social {
             margin: auto;
             margin-left: 0;
 
             a {
-                margin: auto .5rem;
+                margin: auto 0.5rem;
                 display: inline-block;
 
-                transition: transform .2s;
+                transition: transform 0.2s;
 
                 &:hover,
-                &:active, 
+                &:active,
                 &:focus {
                     transform: scale(1.25);
                 }
@@ -33,5 +39,117 @@ footer {
                 }
             }
         }
+
+        .menu-item {
+            display: flex;
+            font-weight: 400;
+                
+            &:first-child {
+                .nav-link {
+                    margin-left: 0 !important;
+                }
+            }
+            &:last-child {
+
+                .nav-link {
+                    margin-right: 0 !important;
+                }
+            }
+
+            .nav-link {
+                margin: auto;
+
+                color: $footer-fg;
+                font-size: .9rem;
+                text-transform: uppercase;
+
+                padding: 0.1rem 0 !important;
+
+                margin: 0 0.75rem auto !important;
+
+                letter-spacing: 1px;
+
+                &:hover,
+                &:focus {
+                    color: $footer-fg-hover;
+                }
+
+                &:active {
+                    color: var(--bs-primary);
+                }
+
+                span {
+                    transition: border-bottom-color 0.1s ease;
+                    border-bottom: solid 1px transparent;
+                }
+            }
+
+            &.dropdown {
+                display: flex !important;
+                flex-direction: column !important;
+                
+                .dropdown-toggle::after {
+                    display: none !important;
+                }
+    
+                .dropdown-menu {
+                    position: relative !important;
+                    display: block !important;
+    
+                    text-align: right;
+    
+                    color: $footer-fg;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: $footer-bg;
+    
+                    .dropdown-item {
+                        color: $footer-fg-hover;
+                        text-transform: uppercase;
+    
+                        padding: 0.25rem 0.5rem !important;
+                        padding-right: 0 !important;
+                        font-size: 0.85rem !important;
+                        background-color: transparent;
+    
+                        &:hover,
+                        &:active,
+                        &:focus {
+                            color: $footer-fg;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-info {
+        background-color: #195766;
+        color: white;
+
+        .phones {
+            a {
+                color: inherit;
+            }
+
+            h5 {
+                font-weight: 600;
+            }
+        }
+
+        .address {
+            text-transform: uppercase;
+            font-size: .75rem;
+            p {
+                margin: 0;
+            }
+        }
+    }
+    
+    .footer-bottom {
+        background-color: #0A2F40;
+        color: white;
+
+        font-size: .75rem;
     }
 }

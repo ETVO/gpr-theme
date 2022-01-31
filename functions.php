@@ -117,7 +117,8 @@ final class Theme_Functions
 		// Register nav menus
 		register_nav_menus(
 			array(
-				"main_menu"   => esc_html__( "Main" )
+				"main_menu"   => esc_html__( "Principal" ),
+				"footer_menu"   => esc_html__( "Rodapé" ),
 			)
 		);
 
@@ -237,8 +238,7 @@ final class Theme_Functions
 		$version = THEME_VERSION;
 
 		wp_enqueue_style('bootstrap-icons', $dir . 'bootstrap-icons/bootstrap-icons.css', [], "1.5.0", false);
-		wp_enqueue_style('source-sans-pro', $dir . 'SourceSansPro/font.css', [], $version, false);
-		wp_enqueue_style('rebellion-knight', $dir . 'RebellionKnight/font.css', [], $version, false);
+		wp_enqueue_style('raleway', $dir . 'Raleway/font.css', [], $version, false);
 	}
 
 	/**

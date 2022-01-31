@@ -16,15 +16,12 @@
         
 
         function addRow(parentSelector = null) {
-            if(parentSelector == null || parentSelector[0] != '#') {
+            if(parentSelector == null || parentSelector.charAt(0) != '#') {
                 console.error('parentSelector is null or does not start with a #');
                 return;
             } 
 
-            console.log(parentSelector);
-
             var row = $(parentSelector + ' .empty-row').clone(true);
-            console.log(row);
             row.removeClass('empty-row');
             row.appendTo(parentSelector + ' .rows');
         }
@@ -45,19 +42,14 @@
                 }
             });
             
-            $('.add-row').on('click', () => {
-                console.log(this);
-                var parentId = $(this).attr('data-parent');
-                var parentSelector = '#' + parentId;
-                var row = $(parentSelector + ' .empty-row').clone(true);
-                row.removeClass('empty-row');
-                row.appendTo(parentSelector + ' .rows');
+            $('.add-row').on('click', (e) => {
+                var parentId = $(e.target).attr('data-parent');
+                addRow('#' + parentId);
             });
             
-            $('.remove-row').on('click', () => {
-                if(!withConfirmation || confirm('Deseja realmente remover essa característica?')) {
-                    $(this).parents('.row').remove();
-                }
+            $('.remove-row').on('click', (e) => {
+                
+                $(e.target).parents('.row').remove();
             });
         }
     }
