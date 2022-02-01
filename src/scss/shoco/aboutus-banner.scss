@@ -1,0 +1,17 @@
+.shoco-aboutus-banner {
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: scroll;
+    height: 60vh;
+
+    .overlay {
+        background: linear-gradient(90deg, rgba(#0A2F40, .9), rgba(#0A2F40, 0));
+    }
+
+    .title {
+        letter-spacing: 4.8px;
+        color: #ffffff;
+        text-shadow: 0px 0px 10px rgba(#102938, .8);
+    }
+}

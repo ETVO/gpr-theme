@@ -96,7 +96,7 @@ class Customizer_Options {
         $wp_customize->add_section(
             $section,
             array(
-                'title'    => __('Home'),
+                'title'    => 'Home',
                 'priority' => 20,
                 'panel'    => $panel,
             )
@@ -180,6 +180,69 @@ class Customizer_Options {
             'type'     => 'image',
             'settings' => 'form_image',
             'label'    => esc_html__('Imagem de fundo'),
+            'section'  => $section
+        ] );
+        
+
+        /**
+         * ------------------- Section ----------------
+         */
+        $section = 'aboutus_options';
+        $wp_customize->add_section(
+            $section,
+            array(
+                'title'    => __('Quem Somos'),
+                'priority' => 25,
+                'panel'    => $panel,
+            )
+        );
+       
+        /**
+         *  Title   
+         */
+        Kirki::add_field( 
+            'aboutus_banner',
+            array(
+                'type'      => 'custom',
+                'settings'  => 'aboutus_banner',
+                'section'   => $section,
+                'default'   => '<h3 class="customize-section-title">' 
+                    . __('Banner') 
+                    . '</h3>'
+            )
+        );
+
+        /**
+         *  Field
+         */
+        $wp_customize->add_setting(
+            'banner_image',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'banner_image', [
+            'type'     => 'image',
+            'settings' => 'banner_image',
+            'label'    => esc_html__('Imagem de fundo'),
+            'section'  => $section
+        ] );
+
+        /**
+         *  Field
+         */
+        $wp_customize->add_setting(
+            'banner_text',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'banner_text', [
+            'type'     => 'text',
+            'settings' => 'banner_text',
+            'label'    => esc_html__('Texto'),
             'section'  => $section
         ] );
         

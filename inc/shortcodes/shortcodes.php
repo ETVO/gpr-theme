@@ -40,6 +40,7 @@ class Theme_Shortcodes {
             'empreendimentos',
             'spe',
             'gpr_form',
+            'aboutus_banner',
         );
 
         // Add shortcodes
