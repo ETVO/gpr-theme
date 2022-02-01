@@ -1,10 +1,7 @@
 
-
 /** 
  * Theme JS
  */
-
-
 (jQuery)(
     function ($) {
         /**
@@ -12,45 +9,87 @@
          */
         $(document.body).ready(function () {
             metaboxRepeaterLogic();
+            imageSelectorLogic();
         });
-        
 
-        function addRow(parentSelector = null) {
-            if(parentSelector == null || parentSelector.charAt(0) != '#') {
-                console.error('parentSelector is null or does not start with a #');
-                return;
-            } 
+        /**
+         * Add metabox repeater-field logic
+         */
+        function metaboxRepeaterLogic() {
 
-            var row = $(parentSelector + ' .empty-row').clone(true);
-            row.removeClass('empty-row');
-            row.appendTo(parentSelector + ' .rows');
-        }
+            $('.repeater-field').each((i, repeater) => {
+            });
 
-        function removeRow(withConfirmation = false) {
-            
+            $('.add-row').on('click', (e) => {
+                var parentSelector = $(e.target).attr('data-parent');
+
+                var row = $(parentSelector + ' .empty-row').clone(true);
+                row.removeClass('empty-row');
+                row.addClass('new-row');
+                row.appendTo(parentSelector + ' .rows');
+            });
+
+            $('.remove-row').on('click', (e) => {
+                $(e.target).parents('.row').remove();
+            });
         }
 
         /**
          * Add metabox repeater-field logic
          */
+        function imageSelectorLogic() {
+            $('.select-image-button').on('click', uploadImage);
+            $('.image-preview').on('click', uploadImage);
+            $('.remove-image-button').on('click', removeImage);
+        }
 
-        function metaboxRepeaterLogic() {
 
-            $('.repeater-field').each((i, repeater) => {
-                if($(repeater).find('.row:not(.empty-row)').length == 0) {
-                    addRow('#' + $(repeater).attr('id'));
+        /**
+         * Upload image
+         */
+        function uploadImage(e) {
+            e.preventDefault();
+            var $this = $(e.currentTarget);
+            var $select_button = $this.parent().find('.select-image-button');
+            var $input_field = $this.parent().find('.image-input');
+            var $image = $this.parent().find('.image-preview');
+            var custom_uploader = wp.media.frames.file_frame = wp.media({
+                title: 'Add Image',
+                button: {
+                    text: 'Add Image'
+                },
+                multiple: false
+            });
+            custom_uploader.on('select', function () {
+                var attachment = custom_uploader.state().get('selection').first().toJSON();
+                $input_field.val(attachment.url);
+                $image.attr('src', attachment.url);
+
+                if (attachment.url != '') {
+                    $image.show();
+                    $select_button.hide();
+                }
+                else {
+                    $image.hide();
+                    $select_button.show();
+                    // $remove_button.hide();
                 }
             });
-            
-            $('.add-row').on('click', (e) => {
-                var parentId = $(e.target).attr('data-parent');
-                addRow('#' + parentId);
-            });
-            
-            $('.remove-row').on('click', (e) => {
-                
-                $(e.target).parents('.row').remove();
-            });
+            custom_uploader.open();
+        }
+
+        function removeImage(e) {
+            e.preventDefault();
+            var $this = $(e.currentTarget);
+            var $input_field = $this.parent().find('.image-input');
+            var $select_button = $this.parent().find('.select-image-button');
+            var $image = $this.parent().find('.image-preview');
+
+            $input_field.val('');
+            $image.attr('src', '');
+            $select_button.show();
+            $image.hide();
+
         }
     }
 )

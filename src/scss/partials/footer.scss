@@ -130,8 +130,14 @@ footer {
         .phones {
             a {
                 color: inherit;
+                
+                &:hover,
+                &:focus,
+                &:active {
+                    color: rgba(white, .6);
+                }
             }
-
+            
             h5 {
                 font-weight: 600;
             }
@@ -143,6 +149,17 @@ footer {
             p {
                 margin: 0;
             }
+
+            a {
+                color: inherit;
+                
+                &:hover,
+                &:focus,
+                &:active {
+                    color: rgba(white, .6);
+                }
+            }
+                
         }
     }
     
@@ -151,5 +168,15 @@ footer {
         color: white;
 
         font-size: .75rem;
+
+        a {
+            color: inherit;
+                
+            &:hover,
+            &:focus,
+            &:active {
+                color: rgba(white, .6);
+            }
+        }
     }
 }

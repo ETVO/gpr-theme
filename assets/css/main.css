@@ -198,6 +198,9 @@ footer .footer-info {
 footer .footer-info .phones a {
   color: inherit;
 }
+footer .footer-info .phones a:hover, footer .footer-info .phones a:focus, footer .footer-info .phones a:active {
+  color: rgba(255, 255, 255, 0.6);
+}
 footer .footer-info .phones h5 {
   font-weight: 600;
 }
@@ -208,10 +211,121 @@ footer .footer-info .address {
 footer .footer-info .address p {
   margin: 0;
 }
+footer .footer-info .address a {
+  color: inherit;
+}
+footer .footer-info .address a:hover, footer .footer-info .address a:focus, footer .footer-info .address a:active {
+  color: rgba(255, 255, 255, 0.6);
+}
 footer .footer-bottom {
   background-color: #0A2F40;
   color: white;
   font-size: 0.75rem;
+}
+footer .footer-bottom a {
+  color: inherit;
+}
+footer .footer-bottom a:hover, footer .footer-bottom a:focus, footer .footer-bottom a:active {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.shoco-empreendimentos .title {
+  color: #0a2f40;
+}
+.shoco-empreendimentos .items .item .inner {
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.shoco-empreendimentos .items .item .image img {
+  border-radius: 20px;
+}
+.shoco-empreendimentos .items .item .info {
+  padding: 20px 15px;
+}
+.shoco-empreendimentos .items .item .info .nome {
+  font-weight: bold;
+}
+.shoco-empreendimentos .items .item .info .endereco {
+  font-size: 0.8rem;
+}
+.shoco-empreendimentos .items .item .info .endereco .icon {
+  color: var(--bs-primary);
+}
+.shoco-empreendimentos .items .item .info .endereco .text {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.5);
+}
+.shoco-empreendimentos .items .item .info .action {
+  margin-top: 0.75rem;
+}
+.shoco-empreendimentos .items .item .info .action a {
+  font-weight: 600;
+  font-size: 0.8rem;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 7px 14px;
+  border: solid 2px var(--bs-primary);
+}
+
+@media all and (max-width: 576px) {
+  .shoco_empreendimentos .items .item {
+    max-width: 300px;
+  }
+}
+.shoco-spe .image img {
+  width: calc(200px + 10vw);
+}
+
+@media all and (max-width: 768px) {
+  .shoco-spe .image img {
+    max-width: 100%;
+  }
+}
+.shoco-gpr-form {
+  background-repeat: no-repeat;
+  background-position: center 35%;
+  background-size: cover;
+  background-attachment: scroll;
+  position: relative;
+}
+.shoco-gpr-form .wrap {
+  background: rgba(10, 47, 64, 0.5);
+}
+.shoco-gpr-form .wrap .form-content {
+  background-color: white;
+  border-radius: 20px;
+  width: 450px;
+  max-width: 450px;
+  padding: 2.25rem 1.5rem;
+}
+.shoco-gpr-form .wrap .form-content .form-label {
+  color: #108796;
+  font-weight: 600;
+  font-size: 0.9rem !important;
+  margin-bottom: 0;
+}
+.shoco-gpr-form .wrap .form-content .form-control {
+  border: solid 1px #56838E;
+  border-radius: 5px;
+  background-color: transparent;
+}
+.shoco-gpr-form .wrap .form-content .form-control::-moz-placeholder {
+  color: #56838E;
+}
+.shoco-gpr-form .wrap .form-content .form-control:-ms-input-placeholder {
+  color: #56838E;
+}
+.shoco-gpr-form .wrap .form-content .form-control::placeholder {
+  color: #56838E;
+}
+.shoco-gpr-form .wrap .form-content .form button {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 1.5px;
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
 }
 
 .wpcf7 form .wpcf7-response-output {
@@ -336,4 +450,18 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #3f4f57;
+}
+
+*::-moz-selection {
+  background-color: var(--bs-primary);
+  color: white;
+}
+
+*::selection {
+  background-color: var(--bs-primary);
+  color: white;
+}
+
+p:last-child {
+  margin-bottom: 0;
 }

@@ -15,14 +15,14 @@
 .button.is-destructive {
     color: #cc1818 !important;
     border-color: #cc1818 !important;
-    background-color: rgba(#cc1818, .05);
-    
+    background-color: rgba(#cc1818, 0.05);
+
     &:hover,
     &:active,
     &:focus {
         color: #710d0d !important;
         border-color: #710d0d !important;
-        background-color: rgba(#cc1818, .1);
+        background-color: rgba(#cc1818, 0.1);
     }
 }
 
@@ -42,6 +42,19 @@
                 display: none;
             }
 
+            &.new-row,
+            &.empty-row {
+                .fields .field.icon-field .image-preview {
+                    display: none;
+                }
+            }
+
+            &:not(.empty-row):not(.new-row) {
+                .fields .field.icon-field .select-image-button {
+                    display: none;
+                }
+            }
+
             .fields {
                 flex: 1;
                 display: flex;
@@ -49,6 +62,17 @@
 
                 .field {
                     margin: 0 0.5rem;
+                    display: inline-flex;
+
+                    &.icon-field {
+                        .image-preview {
+                            margin-right: 0.5rem;
+                            width: 1.25rem;
+                            height: 1.25rem;
+                            object-fit: contain;
+                            cursor: pointer;
+                        }
+                    }
 
                     &:first-child {
                         margin-left: 0;
@@ -57,8 +81,6 @@
                     &:last-child {
                         margin-right: 0;
                     }
-
-                    display: inline-flex;
 
                     > * {
                         display: inline-block;

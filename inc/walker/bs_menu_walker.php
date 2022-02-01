@@ -100,7 +100,7 @@ class BS_Menu_Walker extends Walker_Nav_Menu
         $attributes .= !empty($item->xfn) ? ' rel="' . esc_attr($item->xfn) . '"' : '';
         $attributes .= !empty($item->url) ? ' href="' . esc_attr($item->url) . '"' : '';
 
-        $is_not_excluded = !is_404() && !is_search() && !in_array(get_post_type(), ['exame', 'especialista', 'convenio']);
+        $is_not_excluded = !is_404() && !is_search();
 
         $active_class = ($is_not_excluded && ($item->current || $item->current_item_ancestor || in_array("current_page_parent", $item->classes, true) || in_array("current-post-ancestor", $item->classes, true))) 
             ? 'active' : '';

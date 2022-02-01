@@ -37,7 +37,7 @@ class Meta_Empreendimentos
         $allowed_post_type = 'empreendimento';
 
         $box_label = __('Características em Destaque');
-        $metabox_name = 'empreendimento-destaque';
+        $metabox_name = 'empreendimento_destaque';
 
         if ($post_type == $allowed_post_type) {
             add_meta_box(
@@ -62,7 +62,9 @@ class Meta_Empreendimentos
         // Add an nonce field so we can check for it later.
         wp_nonce_field(EMPRE_META_NONCE, EMPRE_META_NONCE);
 
-        $gpminvoice_group = get_post_meta($post->ID, 'customdata_group', true);
+        $metabox_name = 'empreendimento_destaque';
+
+        $destaques = get_post_meta($post->ID, $metabox_name, true);
 ?>
 
         <div class="repeater-field acf-field" id="repeaterDestaques">
@@ -93,6 +95,31 @@ class Meta_Empreendimentos
                         <button class="remove-row button is-destructive" type="button">Remover</button>
                     </div>
                 </div>
+                <?php foreach ($destaques as $destaque) : ?>
+                    <div class="row">
+                        <div class="fields">
+                            <div class="field icon-field">
+                                <label for="">Ícone</label>
+                                <img src="<?php echo $destaque['icon']; ?>" class="image-preview" />
+                                <input type="hidden" name="icon_carac[]" value="<?php echo $destaque['icon']; ?>" class="image-input">
+                                <span class="icon-btn select-image-button" title="Selecionar imagem">
+                                    <span class="bi bi-image"></span>
+                                </span>
+                                <span class="icon-btn text-danger remove-image-button" title="Remover imagem">
+                                    <span class="bi bi-x-circle"></span>
+                                </span>
+                            </div>
+
+                            <div class="field text-field flex-fill">
+                                <label for="">Descrição</label>
+                                <input type="text" value="<?php echo $destaque['desc']; ?>" placeholder="Descrição da Característica" name="desc_carac[]" id="">
+                            </div>
+                        </div>
+                        <div class="action">
+                            <button class="remove-row button is-destructive" type="button">Remover</button>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
             <div class="bottom-action">
                 <button class="add-row button" type="button" data-parent="#repeaterDestaques">Adicionar nova</button>
@@ -149,22 +176,24 @@ class Meta_Empreendimentos
 
         /* OK, now it's safe for us to save the data. */
 
-        $old = get_post_meta($post_id, 'customdata_group', true);
+        $metabox_name = 'empreendimento_destaque';
+
+        $old = get_post_meta($post_id, $metabox_name, true);
         $new = array();
-        $invoiceItems = $_POST['TitleItem'];
-        $prices = $_POST['TitleDescription'];
-        $count = count($invoiceItems);
+        $icon = $_POST['icon_carac'];
+        $desc = $_POST['desc_carac'];
+        $count = count($icon);
         for ($i = 0; $i < $count; $i++) {
-            if ($invoiceItems[$i] != '') {
-                $new[$i]['TitleItem'] = stripslashes(strip_tags($invoiceItems[$i]));
-                $new[$i]['TitleDescription'] = stripslashes($prices[$i]); // and however you want to sanitize
+            if ($icon[$i] != '') {
+                $new[$i]['icon'] = $icon[$i];
+                $new[$i]['desc'] = $desc[$i]; // and however you want to sanitize
             }
         }
 
         if (!empty($new) && $new != $old) {
-            update_post_meta($post_id, 'customdata_group', $new);
+            update_post_meta($post_id, $metabox_name, $new);
         } else if (empty($new) && $old) {
-            delete_post_meta($post_id, 'customdata_group', $old);
+            delete_post_meta($post_id, $metabox_name, $old);
         }
     }
 }

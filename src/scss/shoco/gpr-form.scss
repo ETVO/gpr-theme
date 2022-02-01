@@ -1,0 +1,50 @@
+.shoco-gpr-form {
+    background-repeat: no-repeat;
+    background-position: center 35%;
+    background-size: cover;
+    background-attachment: scroll;
+    position: relative;
+
+    .wrap {
+        background: rgba(#0a2f40, 0.5);
+
+        .form-content {
+            background-color: white;
+            border-radius: 20px;
+
+            width: 450px;
+            max-width: 450px;
+
+            padding: 2.25rem 1.5rem;
+
+            .form {
+                &-label {
+                    color: #108796;
+                    font-weight: 600;
+                    font-size: .9rem !important;
+
+                    margin-bottom: 0;
+                }
+
+                &-control {
+                    border: solid 1px #56838E;
+                    border-radius: 5px;
+                    background-color: transparent;
+
+                    &::placeholder {
+                        color: #56838E;
+                    }
+                }
+
+                button {
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    color: white;
+                    letter-spacing: 1.5px;
+                    font-size: .85rem;
+                    padding: .5rem 1rem;
+                }
+            }
+        }
+    }
+}

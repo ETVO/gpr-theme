@@ -1,0 +1,65 @@
+.shoco-empreendimentos {
+    .title {
+        color: #0a2f40;
+    }
+
+    .items {
+        .item {
+            
+            .inner {
+                background-color: white;
+                border-radius: 20px;
+                overflow: hidden;
+            }
+            
+            .image {
+                img {
+                    border-radius: 20px;
+                }
+            }
+
+            .info {
+                padding: 20px 15px;
+
+                .nome {
+                    font-weight: bold;
+                }
+
+                .endereco {
+                    font-size: 0.8rem;
+
+                    .icon {
+                        color: var(--bs-primary);
+                    }
+
+                    .text {
+                        font-weight: 500;
+                        color: rgba(#000, 0.5);
+                    }
+                }
+
+                .action {
+                    margin-top: .75rem;
+                    a {
+                        font-weight: 600;
+                        font-size: .8rem;
+                        border-radius: 20px;
+                        display: inline-block;
+                        padding: 7px 14px;
+                        border: solid 2px var(--bs-primary);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 576px) {
+    .shoco_empreendimentos {
+        .items {
+            .item {
+                max-width: 300px;
+            }
+        }
+    }
+}

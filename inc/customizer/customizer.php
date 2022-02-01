@@ -145,9 +145,41 @@ class Customizer_Options {
         );
 
         Kirki::add_field( 'spe_text', [
-            'type'     => 'textarea',
+            'type'     => 'editor',
             'settings' => 'spe_text',
             'label'    => esc_html__('Texto SPE'),
+            'section'  => $section
+        ] );
+       
+        /**
+         *  Title   
+         */
+        Kirki::add_field( 
+            'title_form',
+            array(
+                'type'      => 'custom',
+                'settings'  => 'title_form',
+                'section'   => $section,
+                'default'   => '<h3 class="customize-section-title">' 
+                    . __('Formulário') 
+                    . '</h3>'
+            )
+        );
+
+        /**
+         *  Field
+         */
+        $wp_customize->add_setting(
+            'form_image',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'form_image', [
+            'type'     => 'image',
+            'settings' => 'form_image',
+            'label'    => esc_html__('Imagem de fundo'),
             'section'  => $section
         ] );
         

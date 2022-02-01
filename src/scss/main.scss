@@ -2,6 +2,11 @@
 @import "partials/header";
 @import "partials/footer";
 
+// Import shortcodes
+@import "shoco/empreendimentos";
+@import "shoco/spe";
+@import "shoco/gpr-form";
+
 // Import helpers
 @import "form";
 @import "util";
@@ -41,3 +46,12 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #3f4f57;
 }
+
+*::selection {
+    background-color: var(--bs-primary);
+    color: white;
+}
+
+p:last-child {
+    margin-bottom: 0;
+} 

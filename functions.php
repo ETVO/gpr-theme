@@ -104,6 +104,8 @@ final class Theme_Functions
 		require_once($dir . 'customizer/customizer.php');
 		require_once($dir . 'kirki/kirki-installer-section.php');
 
+		require_once($dir . 'shortcodes/shortcodes.php');
+		
 		require_once($dir . 'helpers/helpers.php');
 	}
 
