@@ -28,7 +28,9 @@ if (substr('$whatsapp_link', 0, 2) != '55') $whatsapp_link = '55' . $whatsapp_li
     <div class="footer-nav">
         <div class="container col-xl-8 d-flex py-3 flex-column flex-md-row">
             <div class="brand mx-auto mb-3 mb-lg-0 ms-lg-0 me-lg-5 p-0">
-                <img src="<?php echo $footer_logo; ?>" alt="<?php echo bloginfo('site_title') ?>">
+                <a href="<?php echo home_url() ?>">
+                    <img src="<?php echo $footer_logo; ?>" alt="<?php echo bloginfo('site_title') ?>">
+                </a>
             </div>
             <div class="social mx-auto ms-lg-0">
                 <?php foreach ($social as $link) : ?>
@@ -69,13 +71,13 @@ if (substr('$whatsapp_link', 0, 2) != '55') $whatsapp_link = '55' . $whatsapp_li
             <div class="address mt-3 mt-md-auto ms-md-0 m-auto text-center text-md-start">
                 <a target="_blank" href="<?php echo $address_map; ?>">
                     <?php echo $address; ?>
-                </a>    
+                </a>
             </div>
         </div>
     </div>
     <div class="footer-bottom d-flex py-3">
         <span class="m-auto text-uppercase">
-            <?php echo date('Y'); ?> © GPR Investimentos Imobiliários&nbsp;&bull;&nbsp;Desenvolvido por <a href="https://imobmark.com.br/">Imobmark</a>
+            <?php echo date('Y'); ?> © GPR Investimentos Imobiliários&nbsp;&bull;&nbsp;Desenvolvido por <a href="https://imobmark.com.br/" target="_blank">Imobmark</a>
         </span>
     </div>
 </footer>

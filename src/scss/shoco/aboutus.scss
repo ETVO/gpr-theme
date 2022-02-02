@@ -1,0 +1,109 @@
+.shoco-aboutus-banner {
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-attachment: scroll;
+    height: 60vh;
+
+    .overlay {
+        background: linear-gradient(90deg, rgba(#0a2f40, 0.9), rgba(#0a2f40, 0));
+    }
+
+    .title {
+        letter-spacing: 4.8px;
+        color: #ffffff;
+        text-shadow: 0px 0px 10px rgba(#102938, 0.8);
+    }
+}
+
+.shoco-spe,
+.shoco-dna {
+    .image {
+        img {
+            width: calc(200px + 10vw);
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    .shoco-spe,
+    .shoco-dna {
+        .image {
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.shoco-servicos {
+    .servico {
+        border: solid 2px var(--bs-primary);
+        border-radius: 10px;
+        min-height: 80px;
+        text-align: center;
+        display: flex;
+
+        padding: 1rem 2.5rem;
+
+        span {
+            color: var(--bs-primary);
+            margin: auto;
+            font-weight: 500;
+        }
+    }
+}
+
+.shoco-cultura {
+    .banner {
+        position: relative;
+
+        .overlay {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            
+            background: linear-gradient(rgba(#0a2f40, 0.8), rgba(#0a2f40, 0) 70%);
+
+            .title {
+                width: 100%;
+                height: 35%;
+            }
+        }
+    }
+
+    .sideimg {
+        height: 100%;
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .valores {
+        padding: 3rem 2rem;
+
+        .valor {
+            padding: 1rem;
+            .icon {
+                img {
+                    height: 60px;
+                    width: 60px;
+                    object-fit: contain;
+                }
+            }
+            .title {
+                color: #1E7B8B;
+                
+                * {
+                    font-weight: 600;
+                }
+            }
+
+            .desc {
+                color: #195766;
+                font-size: .9rem;
+            }
+        }
+    }
+}

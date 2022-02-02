@@ -246,7 +246,480 @@ class Customizer_Options {
             'section'  => $section
         ] );
         
+       
+        /**
+         *  Title   
+         */
+        Kirki::add_field( 
+            'aboutus_dna',
+            array(
+                'type'      => 'custom',
+                'settings'  => 'aboutus_dna',
+                'section'   => $section,
+                'default'   => '<h3 class="customize-section-title">' 
+                    . __('DNA') 
+                    . '</h3>'
+            )
+        );
+
+        /**
+         *  Field
+         */
+        $wp_customize->add_setting(
+            'dna_image',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'dna_image', [
+            'type'     => 'image',
+            'settings' => 'dna_image',
+            'label'    => esc_html__('Imagem de fundo'),
+            'section'  => $section
+        ] );
+
+        /**
+         *  Field
+         */
+        $wp_customize->add_setting(
+            'dna_title',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'dna_title', [
+            'type'     => 'text',
+            'settings' => 'dna_title',
+            'label'    => esc_html__('Título'),
+            'section'  => $section
+        ] );
         
+
+        /**
+         *  Field
+         */
+        $wp_customize->add_setting(
+            'dna_text',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'dna_text', [
+            'type'     => 'editor',
+            'settings' => 'dna_text',
+            'label'    => esc_html__('Texto'),
+            'section'  => $section
+        ] );
+        
+        
+       
+        /**
+         *  Title   
+         */
+        Kirki::add_field( 
+            'aboutus_parceiros',
+            array(
+                'type'      => 'custom',
+                'settings'  => 'aboutus_parceiros',
+                'section'   => $section,
+                'default'   => '<h3 class="customize-section-title">' 
+                    . __('Parceiros') 
+                    . '</h3>'
+            )
+        );
+
+        /**
+         *  Field
+         */
+        $wp_customize->add_setting(
+            'parceiros_image',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'parceiros_image', [
+            'type'     => 'image',
+            'settings' => 'parceiros_image',
+            'label'    => esc_html__('Imagem de fundo'),
+            'section'  => $section
+        ] );
+
+        /**
+         *  Field
+         */
+        $wp_customize->add_setting(
+            'parceiros_title',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'parceiros_title', [
+            'type'     => 'text',
+            'settings' => 'parceiros_title',
+            'label'    => esc_html__('Título'),
+            'section'  => $section
+        ] );
+       
+
+
+        /**
+         *  Title   
+         */
+        Kirki::add_field( 
+            'aboutus_servicos',
+            array(
+                'type'      => 'custom',
+                'settings'  => 'aboutus_servicos',
+                'section'   => $section,
+                'default'   => '<h3 class="customize-section-title">' 
+                    . __('Serviços') 
+                    . '</h3>'
+            )
+        );
+
+        /**
+         *  Field
+         */
+        $wp_customize->add_setting(
+            'servicos',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'servicos', [
+            'type'        => 'repeater',
+            'section'     => $section,
+            'settings'     => 'servicos',
+            'label'       => esc_html__('Serviços prestados'),
+            'row_label' => [
+                'type'  => 'field',
+                'value' => esc_html__('Serviço'),
+                'field' => 'label',
+            ],
+            'button_label' => esc_html__('Adicionar novo'),
+            'default'      => [
+                [
+                    'desc' => 'Estudo de Viabilidade econômico e financeira',
+                ],
+            ],
+            'fields' => [
+                'desc'  => [
+                    'type' => 'text',
+                    'label' => __('Descrição do serviço'),
+                ],
+            ]
+        ] );
+       
+
+
+        /**
+         *  Title   
+         */
+        Kirki::add_field( 
+            'aboutus_cultura',
+            array(
+                'type'      => 'custom',
+                'settings'  => 'aboutus_cultura',
+                'section'   => $section,
+                'default'   => '<h3 class="customize-section-title">' 
+                    . __('Cultura GPR') 
+                    . '</h3>'
+            )
+        );
+
+        /**
+         *  Field
+         */
+        $wp_customize->add_setting(
+            'cultura_title',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'cultura_title', [
+            'type'     => 'text',
+            'settings' => 'cultura_title',
+            'label'    => esc_html__('Título'),
+            'section'  => $section
+        ] );
+
+        /**
+         *  Field
+         */
+        $wp_customize->add_setting(
+            'cultura_backimg',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'cultura_backimg', [
+            'type'     => 'image',
+            'settings' => 'cultura_backimg',
+            'label'    => esc_html__('Imagem de fundo'),
+            'section'  => $section
+        ] );
+
+        /**
+         *  Field
+         */
+        $wp_customize->add_setting(
+            'cultura_sideimg',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'cultura_sideimg', [
+            'type'     => 'image',
+            'settings' => 'cultura_sideimg',
+            'label'    => esc_html__('Imagem lateral'),
+            'section'  => $section
+        ] );
+
+        /**
+         *  Field
+         */
+        $wp_customize->add_setting(
+            'cultura_valores',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'cultura_valores', [
+            'type'        => 'repeater',
+            'section'     => $section,
+            'settings'     => 'cultura_valores',
+            'label'       => esc_html__('Valores'),
+            'row_label' => [
+                'type'  => 'field',
+                'value' => esc_html__('Valor'),
+                'field' => 'label',
+            ],
+            'button_label' => esc_html__('Adicionar novo'),
+            'default'      => [],
+            'fields' => [
+                'image'  => [
+                    'type' => 'image',
+                    'label' => __('Ícone'),
+                ],
+                'title'  => [
+                    'type' => 'text',
+                    'label' => __('Título'),
+                ],
+                'desc'  => [
+                    'type' => 'textarea',
+                    'label' => __('Descrição'),
+                ],
+            ]
+        ] );
+        
+
+        /**
+         * ------------------- Section ----------------
+         */
+        $section = 'negocio_options';
+        $wp_customize->add_section(
+            $section,
+            array(
+                'title'    => __('O Negócio'),
+                'priority' => 27,
+                'panel'    => $panel,
+            )
+        );
+       
+        /**
+         *  Title   
+         */
+        Kirki::add_field( 
+            'negocio_spe',
+            array(
+                'type'      => 'custom',
+                'settings'  => 'negocio_spe',
+                'section'   => $section,
+                'default'   => '<h3 class="customize-section-title">' 
+                    . __('SPE') 
+                    . '</h3>'
+            )
+        );
+
+        /**
+         *  Field
+         */
+        $wp_customize->add_setting(
+            'spe_long_image',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'spe_long_image', [
+            'type'     => 'image',
+            'settings' => 'spe_long_image',
+            'label'    => esc_html__('Imagem de fundo'),
+            'section'  => $section
+        ] );
+
+        /**
+         *  Field
+         */
+        $wp_customize->add_setting(
+            'spe_long_text',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'spe_long_text', [
+            'type'     => 'editor',
+            'settings' => 'spe_long_text',
+            'label'    => esc_html__('Texto'),
+            'section'  => $section
+        ] );
+        
+        /**
+         *  Title   
+         */
+        Kirki::add_field( 
+            'negocio_projeto',
+            array(
+                'type'      => 'custom',
+                'settings'  => 'negocio_projeto',
+                'section'   => $section,
+                'default'   => '<h3 class="customize-section-title">' 
+                    . __('Etapas dos projetos') 
+                    . '</h3>'
+            )
+        );
+
+        /**
+         *  Field
+         */
+        $wp_customize->add_setting(
+            'projeto_timeline',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'projeto_timeline', [
+            'type'     => 'image',
+            'settings' => 'projeto_timeline',
+            'label'    => esc_html__('Linha do tempo'),
+            'section'  => $section
+        ] );
+
+        /**
+         *  Field
+         */
+        $wp_customize->add_setting(
+            'projeto_etapas',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'projeto_etapas', [
+            'type'        => 'repeater',
+            'section'     => $section,
+            'settings'     => 'projeto_etapas',
+            'label'       => esc_html__('Etapas'),
+            'row_label' => [
+                'type'  => 'field',
+                'value' => esc_html__('Etapa'),
+                'field' => 'label',
+            ],
+            'button_label' => esc_html__('Adicionar novo'),
+            'default'      => [],
+            'fields' => [
+                'title'  => [
+                    'type' => 'text',
+                    'label' => __('Título'),
+                ],
+                'icon' => [
+                    'type' => 'image',
+                    'label' => __('Ícone')
+                ],
+                'desc'  => [
+                    'type' => 'textarea',
+                    'label' => __('Descrição'),
+                ],
+            ]
+        ] );
+        
+        /**
+         *  Title   
+         */
+        Kirki::add_field( 
+            'negocio_acompanhamento',
+            array(
+                'type'      => 'custom',
+                'settings'  => 'negocio_acompanhamento',
+                'section'   => $section,
+                'default'   => '<h3 class="customize-section-title">' 
+                    . __('Acompanhamento') 
+                    . '</h3>'
+            )
+        );
+
+        /**
+         *  Field
+         */
+        $wp_customize->add_setting(
+            'acompanhamento_text',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'acompanhamento_text', [
+            'type'     => 'editor',
+            'settings' => 'acompanhamento_text',
+            'label'    => esc_html__('Texto'),
+            'section'  => $section
+        ] );
+
+        /**
+         *  Field
+         */
+        $wp_customize->add_setting(
+            'acompanhamento_link',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'acompanhamento_link', [
+            'type'     => 'url',
+            'settings' => 'acompanhamento_link',
+            'label'    => esc_html__('Link'),
+            'section'  => $section
+        ] );
+
+        /**
+         *  Field
+         */
+        $wp_customize->add_setting(
+            'acompanhamento_image',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'acompanhamento_image', [
+            'type'     => 'image',
+            'settings' => 'acompanhamento_image',
+            'label'    => esc_html__('Imagem'),
+            'section'  => $section
+        ] );
 
         /**
          * ------------------- Section ----------------

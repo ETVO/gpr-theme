@@ -41,6 +41,14 @@ class Theme_Shortcodes {
             'spe',
             'gpr_form',
             'aboutus_banner',
+            'dna',
+            'parceiros',
+            'servicos',
+            'cultura',
+            'spe_long',
+            'projeto',
+            'acompanhamento',
+            'empreendimentos_list',
         );
 
         // Add shortcodes

@@ -113,7 +113,7 @@ footer .footer-nav {
 footer .footer-nav .brand {
   display: flex;
 }
-footer .footer-nav .brand img {
+footer .footer-nav .brand a, footer .footer-nav .brand img {
   margin: auto 0;
   height: 60px;
 }
@@ -260,7 +260,7 @@ footer .footer-bottom a:hover, footer .footer-bottom a:focus, footer .footer-bot
   margin-top: 0.75rem;
 }
 .shoco-empreendimentos .items .item .info .action a {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.8rem;
   border-radius: 20px;
   display: inline-block;
@@ -271,15 +271,6 @@ footer .footer-bottom a:hover, footer .footer-bottom a:focus, footer .footer-bot
 @media all and (max-width: 576px) {
   .shoco_empreendimentos .items .item {
     max-width: 300px;
-  }
-}
-.shoco-spe .image img {
-  width: calc(200px + 10vw);
-}
-
-@media all and (max-width: 768px) {
-  .shoco-spe .image img {
-    max-width: 100%;
   }
 }
 .shoco-gpr-form {
@@ -330,8 +321,7 @@ footer .footer-bottom a:hover, footer .footer-bottom a:focus, footer .footer-bot
 
 .shoco-aboutus-banner {
   background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
+  background-position: 50%;
   background-attachment: scroll;
   height: 60vh;
 }
@@ -342,6 +332,245 @@ footer .footer-bottom a:hover, footer .footer-bottom a:focus, footer .footer-bot
   letter-spacing: 4.8px;
   color: #ffffff;
   text-shadow: 0px 0px 10px rgba(16, 41, 56, 0.8);
+}
+
+.shoco-spe .image img,
+.shoco-dna .image img {
+  width: calc(200px + 10vw);
+}
+
+@media all and (max-width: 768px) {
+  .shoco-spe .image img,
+.shoco-dna .image img {
+    max-width: 100%;
+  }
+}
+.shoco-servicos .servico {
+  border: solid 2px var(--bs-primary);
+  border-radius: 10px;
+  min-height: 80px;
+  text-align: center;
+  display: flex;
+  padding: 1rem 2.5rem;
+}
+.shoco-servicos .servico span {
+  color: var(--bs-primary);
+  margin: auto;
+  font-weight: 500;
+}
+
+.shoco-cultura .banner {
+  position: relative;
+}
+.shoco-cultura .banner .overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(10, 47, 64, 0.8), rgba(10, 47, 64, 0) 70%);
+}
+.shoco-cultura .banner .overlay .title {
+  width: 100%;
+  height: 35%;
+}
+.shoco-cultura .sideimg {
+  height: 100%;
+}
+.shoco-cultura .sideimg img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.shoco-cultura .valores {
+  padding: 3rem 2rem;
+}
+.shoco-cultura .valores .valor {
+  padding: 1rem;
+}
+.shoco-cultura .valores .valor .icon img {
+  height: 60px;
+  width: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.shoco-cultura .valores .valor .title {
+  color: #1E7B8B;
+}
+.shoco-cultura .valores .valor .title * {
+  font-weight: 600;
+}
+.shoco-cultura .valores .valor .desc {
+  color: #195766;
+  font-size: 0.9rem;
+}
+
+.shoco-spe-long .strip .title {
+  font-size: 3.5rem;
+  line-height: 1;
+  font-weight: 700;
+  color: #108796;
+  letter-spacing: 4px;
+}
+.shoco-spe-long .strip .subtitle {
+  max-width: 150px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--bs-dark);
+  margin-bottom: 0.25rem;
+}
+.shoco-spe-long .spe-content {
+  height: 60vh;
+  position: relative;
+  background-position: 0% 50%;
+}
+.shoco-spe-long .spe-content .overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-90deg, #1c4d5b 50%, rgba(28, 77, 91, 0) 65%);
+}
+.shoco-spe-long .spe-content .overlay .text {
+  max-width: 400px;
+  margin: auto;
+  margin-right: 0;
+  font-size: 0.9rem;
+  color: white;
+}
+
+@media all and (max-width: 991.9px) {
+  .shoco-spe-long .spe-content {
+    height: auto;
+    position: relative;
+  }
+  .shoco-spe-long .spe-content .image img {
+    width: 100%;
+    height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .shoco-spe-long .spe-content .overlay {
+    padding: 3rem 0;
+    position: relative;
+    background: #1c4d5b;
+  }
+  .shoco-spe-long .spe-content .overlay .text {
+    max-width: 400px;
+    margin-right: auto;
+  }
+}
+.shoco-projeto .etapa .title {
+  height: 60px;
+  display: flex;
+}
+.shoco-projeto .etapa .title * {
+  font-size: 1.1rem;
+  margin: auto;
+}
+.shoco-projeto .etapa .icon img {
+  height: 60px;
+  width: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.shoco-projeto .etapa .desc {
+  color: #195766;
+  font-size: 0.85rem;
+}
+
+.shoco-acompanhamento .content {
+  background-color: #195766;
+  display: flex;
+}
+.shoco-acompanhamento .content .content-inner {
+  padding: 3rem 2rem;
+  max-width: 500px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.shoco-acompanhamento .content .content-inner .title * {
+  font-weight: normal;
+}
+.shoco-acompanhamento .content .content-inner .text {
+  font-size: 0.9rem;
+}
+.shoco-acompanhamento .content .content-inner .action a {
+  text-transform: uppercase;
+  padding: 7px 14px;
+  border: solid 2px var(--bs-primary);
+  border-radius: 50rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+}
+.shoco-acompanhamento .image img {
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
+@media all and (min-width: 992px) {
+  .shoco-acompanhamento .content .content-inner {
+    padding: 3rem 5rem;
+    margin-left: auto;
+  }
+  .shoco-acompanhamento .image img {
+    height: 100%;
+  }
+}
+@media all and (max-width: 575.9px) {
+  .shoco-acompanhamento .content .content-inner {
+    padding: 2rem 0.75rem;
+    margin-left: auto;
+  }
+}
+.shoco-empreendimentos-list .item .images img {
+  padding: 0.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+.shoco-empreendimentos-list .item .images .empha img {
+  width: 650px;
+  height: 400px;
+}
+.shoco-empreendimentos-list .item .images .side img {
+  width: 100%;
+  height: 200px;
+}
+.shoco-empreendimentos-list .item .info .endereco {
+  font-size: 0.8rem;
+}
+.shoco-empreendimentos-list .item .info .endereco .icon {
+  color: var(--bs-primary);
+}
+.shoco-empreendimentos-list .item .info .endereco .text {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.5);
+}
+.shoco-empreendimentos-list .item .info .meta .carac {
+  margin-bottom: 0.75rem;
+}
+.shoco-empreendimentos-list .item .info .meta .carac img {
+  height: 25px;
+  width: 25px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-right: 0.75rem;
+}
+.shoco-empreendimentos-list .item .info .meta .carac span {
+  font-size: 0.85rem;
+  color: #195766;
+}
+.shoco-empreendimentos-list .item .info .action a {
+  font-weight: 700;
+  font-size: 0.8rem;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 5px 14px;
+  border: solid 2px var(--bs-primary);
 }
 
 .wpcf7 form .wpcf7-response-output {
@@ -429,6 +658,25 @@ label[for] {
 .dropdown .dropdown-menu .menu-item a {
   transition: background-color 0.2s;
   padding: 0.5rem 1rem;
+}
+
+.shoco-dna .title {
+  color: #195766;
+}
+.shoco-dna .title * {
+  font-weight: 300;
+}
+.shoco-dna .text {
+  color: #195766;
+  font-size: 1.1rem;
+}
+
+.text-bluegpr {
+  color: #195766;
+}
+
+.regular-title {
+  color: #195766;
 }
 
 html {
