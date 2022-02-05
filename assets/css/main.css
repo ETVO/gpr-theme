@@ -283,6 +283,9 @@ footer .footer-bottom a:hover, footer .footer-bottom a:focus, footer .footer-bot
 .shoco-gpr-form .wrap {
   background: rgba(10, 47, 64, 0.5);
 }
+.shoco-gpr-form .wrap.darker {
+  background: rgba(10, 47, 64, 0.9);
+}
 .shoco-gpr-form .wrap .form-content {
   background-color: white;
   border-radius: 20px;
@@ -573,6 +576,132 @@ footer .footer-bottom a:hover, footer .footer-bottom a:focus, footer .footer-bot
   border: solid 2px var(--bs-primary);
 }
 
+.shoco-cta-acesso .content {
+  height: 60vh;
+  position: relative;
+  background-position: 0% 50%;
+}
+.shoco-cta-acesso .content .overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-90deg, #1c4d5b 45%, rgba(28, 77, 91, 0) 55%);
+}
+.shoco-cta-acesso .content .overlay .inner {
+  max-width: 400px;
+  margin: auto;
+  margin-right: 0;
+}
+.shoco-cta-acesso .content .overlay .inner .title * {
+  font-weight: normal;
+}
+.shoco-cta-acesso .content .overlay .inner .text {
+  font-size: 0.9rem;
+  color: white;
+}
+.shoco-cta-acesso .content .overlay .inner .action a {
+  text-transform: uppercase;
+  padding: 7px 14px;
+  border: solid 2px var(--bs-primary);
+  border-radius: 50rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+}
+
+@media all and (max-width: 991.9px) {
+  .shoco-cta-acesso .content {
+    height: auto;
+    position: relative;
+  }
+  .shoco-cta-acesso .content .image img {
+    width: 100%;
+    height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .shoco-cta-acesso .content .overlay {
+    padding: 3rem 0;
+    position: relative;
+    background: #1c4d5b;
+  }
+  .shoco-cta-acesso .content .overlay .container {
+    max-width: 400px;
+    margin-right: auto;
+  }
+}
+.shoco-address-map {
+  position: relative;
+}
+.shoco-address-map iframe {
+  width: 100% !important;
+  height: 400px;
+  -o-object-position: right;
+     object-position: right;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.shoco-address-map .overlay {
+  position: absolute;
+  top: 0;
+  left: 200px;
+  max-width: 300px;
+  height: 100%;
+  background-color: rgba(10, 47, 64, 0.9);
+  padding: 2rem;
+}
+.shoco-address-map .overlay .logo svg, .shoco-address-map .overlay .logo img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.shoco-address-map .overlay .address {
+  color: white;
+  font-size: 0.85rem;
+}
+.shoco-address-map .overlay .address p {
+  margin: 0;
+}
+.shoco-address-map .overlay .action a {
+  display: block;
+  border: solid 2px var(--bs-primary);
+  border-radius: 50rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  padding: 5px 10px;
+  transition: background-color 0.2s;
+}
+
+@media all and (max-width: 992px) {
+  .shoco-address-map .overlay {
+    left: 100px;
+  }
+}
+@media all and (max-width: 767px) {
+  .shoco-address-map iframe {
+    height: 250px;
+  }
+  .shoco-address-map .overlay {
+    position: relative;
+    left: 0;
+    max-width: unset;
+    width: 100%;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+  .shoco-address-map .overlay .logo {
+    text-align: center;
+  }
+  .shoco-address-map .overlay .logo svg, .shoco-address-map .overlay .logo img {
+    max-width: 190px;
+  }
+  .shoco-address-map .overlay .address {
+    text-align: center;
+  }
+}
 .wpcf7 form .wpcf7-response-output {
   margin: 1rem 0 !important;
   border-radius: 5px;

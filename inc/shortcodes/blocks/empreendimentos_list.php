@@ -91,25 +91,25 @@ function empreendimentos_list($attrs)
                                     <div class="meta d-flex flex-column flex-md-row mt-3">
                                         <div class="std me-4 pe-4 border-end">
                                             <div class="carac d-flex">
-                                                <img src="<?php echo THEME_IMG_URI . '/dormitorios.png'; ?>" alt="">
+                                                <img src="<?php echo THEME_IMG_URI . '/dormitorios.svg'; ?>" alt="">
                                                 <span><?php echo $dormitorios; ?></span>
                                             </div>
                                             <div class="carac d-flex">
-                                                <img src="<?php echo THEME_IMG_URI . '/metragem.png'; ?>" alt="">
+                                                <img src="<?php echo THEME_IMG_URI . '/metragem.svg'; ?>" alt="">
                                                 <span><?php echo $metragem; ?></span>
                                             </div>
                                             <div class="carac d-flex">
-                                                <img src="<?php echo THEME_IMG_URI . '/area.png'; ?>" alt="">
+                                                <img src="<?php echo THEME_IMG_URI . '/area.svg'; ?>" alt="">
                                                 <span><?php echo $area; ?></span>
                                             </div>
                                         </div>
                                         <div class="custom">
-                                            <?php foreach ($destaque as $carac) : ?>
+                                            <?php if($destaque): foreach ($destaque as $carac) : ?>
                                                 <div class="carac d-flex">
                                                     <img src="<?php echo $carac['icon'] ?>" alt="">
                                                     <span><?php echo $carac['desc']; ?></span>
                                                 </div>
-                                            <?php endforeach; ?>
+                                            <?php endforeach; endif; ?>
                                         </div>
                                     </div>
                                     <div class="action mt-3">

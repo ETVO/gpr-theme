@@ -2,19 +2,42 @@
 
 function gpr_form($attrs)
 {
-    $attrs = shortcode_atts([], $attrs);
+    $attrs = shortcode_atts([
+        'title' => 'Entre em contato',
+        'align' => 'left',
+        'bg_option' => 'normal',
+    ], $attrs);
+
+    $title = $attrs['title'];
+    $align = $attrs['align'];
+    $bg_option = $attrs['bg_option'];
 
     $form_image = get_theme_mod('form_image');
+
+    $margin = '';
+    switch($align) {
+        case 'left':
+            $margin = 'me-auto';
+            break;
+
+        case 'right':
+            $margin = 'ms-auto';
+            break;
+
+        case 'center':
+            $margin = 'mx-auto';
+            break;
+    }
 
     ob_start(); // Start HTML buffering
 ?>
     <section class="shoco-gpr-form" style="background-image: url('<?php echo $form_image; ?>');">
-        <div class="wrap d-flex py-5">
+        <div class="wrap d-flex py-5 <?php echo $bg_option; ?>">
             <!-- <img src="<?php echo $form_image; ?>" alt=""> -->
             <div class="container col-12 col-md-10 col-xl-9 d-flex m-auto">
-                <div class="form-content my-auto">
+                <div class="form-content my-auto <?php echo $margin; ?>">
                     <div class="title">
-                        <h2 class="text-center text-primary">Entre em contato</h2>
+                        <h2 class="text-center text-primary"><?php echo $title; ?></h2>
                     </div>
                     <div class="form">
                         <form action="" onsubmit="return false">

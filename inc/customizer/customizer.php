@@ -724,6 +724,86 @@ class Customizer_Options {
         /**
          * ------------------- Section ----------------
          */
+        $section = 'empre_options';
+        $wp_customize->add_section(
+            $section,
+            array(
+                'title'    => __('Empreendimentos'),
+                'priority' => 28,
+                'panel'    => $panel,
+            )
+        );
+        
+        
+        /**
+         *  Title   
+         */
+        Kirki::add_field( 
+            'empre_cta_acesso',
+            array(
+                'type'      => 'custom',
+                'settings'  => 'empre_cta_acesso',
+                'section'   => $section,
+                'default'   => '<h3 class="customize-section-title">' 
+                    . __('CTA Acesso Investidor') 
+                    . '</h3>'
+            )
+        );
+
+        /**
+         *  Field
+         */
+        $wp_customize->add_setting(
+            'acesso_text',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'acesso_text', [
+            'type'     => 'editor',
+            'settings' => 'acesso_text',
+            'label'    => esc_html__('Texto'),
+            'section'  => $section
+        ] );
+
+        /**
+         *  Field
+         */
+        $wp_customize->add_setting(
+            'acesso_link',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'acesso_link', [
+            'type'     => 'url',
+            'settings' => 'acesso_link',
+            'label'    => esc_html__('Link'),
+            'section'  => $section
+        ] );
+
+        /**
+         *  Field
+         */
+        $wp_customize->add_setting(
+            'acesso_image',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'acesso_image', [
+            'type'     => 'image',
+            'settings' => 'acesso_image',
+            'label'    => esc_html__('Imagem'),
+            'section'  => $section
+        ] );
+
+        /**
+         * ------------------- Section ----------------
+         */
         $section = 'info_options';
         $wp_customize->add_section(
             $section,
@@ -827,6 +907,53 @@ class Customizer_Options {
                     'label' => __('Link do ícone'),
                 ],
             ]
+        ] );
+        /**
+         * ------------------- Section ----------------
+         */
+        $section = 'contato_options';
+        $wp_customize->add_section(
+            $section,
+            array(
+                'title'    => __('Contato (página)'),
+                'priority' => 31,
+                'panel'    => $panel,
+            )
+        );
+
+        /**
+         *  Field
+         */
+        $wp_customize->add_setting(
+            'contato_address',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'contato_address', [
+            'type'     => 'editor',
+            'settings' => 'contato_address',
+            'label'    => esc_html__('Endereço'),
+            'section'  => $section
+        ] );
+
+        /**
+         *  Field
+         */
+        $wp_customize->add_setting(
+            'contato_map_logo',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'contato_map_logo', [
+            'type'          => 'image',
+            'settings'      => 'contato_map_logo',
+            'label'         => esc_html__('Logo'),
+            'description'   => esc_html__('A ser exibida na seção "como chegar"'),
+            'section'       => $section
         ] );
     }
 }

@@ -49,6 +49,8 @@ class Theme_Shortcodes {
             'projeto',
             'acompanhamento',
             'empreendimentos_list',
+            'cta_acesso',
+            'address_map',
         );
 
         // Add shortcodes

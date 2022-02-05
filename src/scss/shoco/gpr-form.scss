@@ -7,6 +7,10 @@
 
     .wrap {
         background: rgba(#0a2f40, 0.5);
+        
+        &.darker {
+            background: rgba(#0a2f40, 0.9);
+        }
 
         .form-content {
             background-color: white;

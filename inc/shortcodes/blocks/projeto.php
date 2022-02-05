@@ -11,7 +11,7 @@ function projeto($attrs)
 ?>
     <section class="shoco-projeto py-5 bg-white">
         <div class="container col-12 col-md-10 col-xl-9 mx-auto py-3">
-            <div class="row w-100 mb-4">
+            <div class="row w-100 m-0 mb-4">
                 <?php foreach($etapas as $etapa): 
                     $icon_url = wp_get_attachment_image_src($etapa['icon'], 'large')[0];   
                 ?>

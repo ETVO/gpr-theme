@@ -76,7 +76,7 @@ if (substr('$whatsapp_link', 0, 2) != '55') $whatsapp_link = '55' . $whatsapp_li
         </div>
     </div>
     <div class="footer-bottom d-flex py-3">
-        <span class="m-auto text-uppercase">
+        <span class="container text-center text-uppercase">
             <?php echo date('Y'); ?> © GPR Investimentos Imobiliários&nbsp;&bull;&nbsp;Desenvolvido por <a href="https://imobmark.com.br/" target="_blank">Imobmark</a>
         </span>
     </div>

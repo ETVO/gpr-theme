@@ -59,7 +59,7 @@ function empreendimentos($attrs)
     if ($query->have_posts()) {
 ?>
 
-        <section class="shoco-empreendimentos py-3 show-all-<?php echo $show_all; ?>">
+        <section class="shoco-empreendimentos pt-3 pb-5 show-all-<?php echo $show_all; ?>">
             <div class="container col-12 col-md-10 col-xl-9 pt-5 mx-auto">
                 <?php if ($show_title) : ?>
                     <div class="title thin-title text-center">
