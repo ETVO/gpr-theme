@@ -95,7 +95,7 @@ class Meta_Empreendimentos
                         <button class="remove-row button is-destructive" type="button">Remover</button>
                     </div>
                 </div>
-                <?php foreach ($destaques as $destaque) : ?>
+                <?php if($destaques): foreach ($destaques as $destaque) : ?>
                     <div class="row">
                         <div class="fields">
                             <div class="field icon-field">
@@ -119,7 +119,7 @@ class Meta_Empreendimentos
                             <button class="remove-row button is-destructive" type="button">Remover</button>
                         </div>
                     </div>
-                <?php endforeach; ?>
+                <?php endforeach; endif; ?>
             </div>
             <div class="bottom-action">
                 <button class="add-row button" type="button" data-parent="#repeaterDestaques">Adicionar nova</button>

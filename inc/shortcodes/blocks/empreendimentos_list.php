@@ -7,7 +7,7 @@ function empreendimentos_list($attrs)
     $title = $attrs['title'];
 
     $post_type = 'empreendimento';
-    $orderby = 'title';
+    $orderby = 'date';
     $order = 'ASC';
 
     // Posts Per Page (-1 means it shows all)
@@ -65,7 +65,7 @@ function empreendimentos_list($attrs)
                     ?>
                         <div class="item d-flex <?php if ($i % 2 == 0) echo 'bg-white'; ?>">
                             <div class="inner container col-12 col-md-10 col-xl-9 mx-auto py-5">
-                                <div class="images d-flex mb-2">
+                                <div class="images d-flex mb-2 flex-column flex-lg-row">
                                     <div class="empha">
                                         <img src="<?php echo $images['image_1']['url']; ?>" alt="<?php echo $images['image_1']['caption']; ?>">
                                     </div>

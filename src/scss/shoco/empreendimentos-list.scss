@@ -68,3 +68,17 @@
         }
     }   
 }
+
+@media all and (max-width: 992px) {
+    .shoco-empreendimentos-list {
+        .item {
+            .images {
+                .empha {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

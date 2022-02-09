@@ -15,7 +15,7 @@
     
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php echo body_class(); ?>>
 
     <div id="head"></div>
 

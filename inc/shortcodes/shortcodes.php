@@ -51,6 +51,7 @@ class Theme_Shortcodes {
             'empreendimentos_list',
             'cta_acesso',
             'address_map',
+            'arquivos',
         );
 
         // Add shortcodes

@@ -1,0 +1,47 @@
+.arquivo-wrap {
+    .arquivo-heading {
+        position: relative;
+        background-position: 50% 30%;
+        background-size: cover;
+        background-blend-mode: soft-light;
+        background-color: #195766;
+        height: 30vh;
+    
+        .overlay {
+            position: absolute;
+    
+            inset: 0;
+            width: 100%;
+            height: 100%;
+    
+            // background-color: rgba(#F47224, .8);
+    
+            .content {
+                color: white;
+                .subtitle {
+                    color: inherit;
+                    font-weight: 300;
+                    font-size: 1.1rem;
+                }
+
+                .title {
+                    color: inherit;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    .arquivo-title {
+        position: relative;
+        .back-btn {
+            position: absolute;
+            inset: 0;
+            
+            img {
+                height: 25px;
+            }
+        } 
+        color: #4E7783; 
+    }
+}

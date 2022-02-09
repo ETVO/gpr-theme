@@ -40,7 +40,8 @@ function gpr_form($attrs)
                         <h2 class="text-center text-primary"><?php echo $title; ?></h2>
                     </div>
                     <div class="form">
-                        <form action="" onsubmit="return false">
+                        <?php echo do_shortcode('[contact-form-7 id="347" title="Formulário de contato 1"]'); ?>
+                        <!-- <form action="" onsubmit="return false">
                             <div class="mb-3">
                                 <label for="nome" class="form-label">Nome:</label>
                                 <input type="text" class="form-control" id="nome" placeholder="Nome Sobrenome">
@@ -62,7 +63,7 @@ function gpr_form($attrs)
                                     Enviar <span class="bi-chevron-right"></span>
                                 </button>
                             </div>
-                        </form>
+                        </form> -->
                     </div>
                 </div>
             </div>

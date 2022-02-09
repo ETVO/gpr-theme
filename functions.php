@@ -100,6 +100,7 @@ final class Theme_Functions
 		require_once($dir . 'walker/bs_menu_walker.php');
 		
 		require_once($dir . 'cpt/cpt-empreendimentos.php');
+		require_once($dir . 'cpt/cpt-arquivo.php');
 		
 		require_once($dir . 'customizer/customizer.php');
 		require_once($dir . 'kirki/kirki-installer-section.php');
