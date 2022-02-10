@@ -34,7 +34,7 @@ if (substr('$whatsapp_link', 0, 2) != '55') $whatsapp_link = '55' . $whatsapp_li
             </div>
             <div class="social mx-auto ms-lg-0">
                 <?php foreach ($social as $link) : ?>
-                    <a class="tlink" href="<?php echo $link['href']; ?>" title="<?php echo $link['icon']; ?>">
+                    <a class="tlink" href="<?php echo $link['url']; ?>" title="<?php echo $link['icon']; ?>">
                         <span class="bi bi-<?php echo $link['icon']; ?>"></span>
                     </a>
                 <?php endforeach; ?>
