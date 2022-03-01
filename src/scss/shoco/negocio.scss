@@ -71,33 +71,6 @@
     }
 }
 
-.shoco-projeto {
-    .etapa {
-        .title {
-            height: 60px;
-            display: flex;
-
-            * {
-                font-size: 1.1rem;
-                margin: auto;
-            }
-        }
-
-        .icon {
-            img {
-                height: 60px;
-                width: 60px;
-                object-fit: contain;
-            }
-        }
-
-        .desc {
-            color: #195766;
-            font-size: 0.85rem;
-        }
-    }
-}
-
 .shoco-acompanhamento {
     .content {
         background-color: #195766;

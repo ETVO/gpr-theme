@@ -27,3 +27,13 @@ if(!function_exists('get_image_props_id')) {
         );
     }
 }
+
+if(!function_exists('clean_str')) {
+    function clean_str($str) {
+        $_str = str_replace(' ', '', $str); // Replaces all spaces.
+
+        $_str = preg_replace('/[^A-Za-z0-9\-]/', '', $_str); // Removes special chars.
+
+        return $_str;
+    }
+}

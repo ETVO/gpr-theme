@@ -46,7 +46,6 @@ class Theme_Shortcodes {
             'servicos',
             'cultura',
             'spe_long',
-            'projeto',
             'acompanhamento',
             'empreendimentos_list',
             'cta_acesso',
