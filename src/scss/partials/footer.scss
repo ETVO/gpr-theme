@@ -2,6 +2,46 @@ $footer-bg: #108796;
 $footer-fg: white;
 $footer-fg-hover: rgba(#fff, 0.5);
 
+.cookies-consent {
+    opacity: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    transition: opacity 0.5s;
+    z-index: 9999;
+
+    margin: 1rem;
+    padding: 1.25rem;
+
+    background: white;
+
+    max-width: 350px;
+    border-radius: 28px;
+    box-shadow: -2px 2px 10px 0px rgba(0, 0, 0, 0.3);
+
+    font-size: 0.9rem;
+
+    .text p {
+        margin-top: 0;
+        margin-bottom: 0.75rem;
+    }
+
+    .action button {
+        font-size: calc(0.75rem + 0.1vw);
+        text-transform: uppercase;
+
+        font-weight: bold;
+        border-width: 2px;
+        border-radius: 50rem;
+
+        &:hover,
+        &:active {
+            color: white;
+        }
+    }
+}
+
 footer {
     .footer-nav {
         background-color: $footer-bg;
@@ -9,7 +49,8 @@ footer {
 
         .brand {
             display: flex;
-            a, img {
+            a,
+            img {
                 margin: auto 0;
                 height: 60px;
             }
@@ -43,14 +84,13 @@ footer {
         .menu-item {
             display: flex;
             font-weight: 400;
-                
+
             &:first-child {
                 .nav-link {
                     margin-left: 0 !important;
                 }
             }
             &:last-child {
-
                 .nav-link {
                     margin-right: 0 !important;
                 }
@@ -60,7 +100,7 @@ footer {
                 margin: auto;
 
                 color: $footer-fg;
-                font-size: .9rem;
+                font-size: 0.9rem;
                 text-transform: uppercase;
 
                 padding: 0.1rem 0 !important;
@@ -87,31 +127,31 @@ footer {
             &.dropdown {
                 display: flex !important;
                 flex-direction: column !important;
-                
+
                 .dropdown-toggle::after {
                     display: none !important;
                 }
-    
+
                 .dropdown-menu {
                     position: relative !important;
                     display: block !important;
-    
+
                     text-align: right;
-    
+
                     color: $footer-fg;
                     border: none;
                     border-radius: 5px;
                     background-color: $footer-bg;
-    
+
                     .dropdown-item {
                         color: $footer-fg-hover;
                         text-transform: uppercase;
-    
+
                         padding: 0.25rem 0.5rem !important;
                         padding-right: 0 !important;
                         font-size: 0.85rem !important;
                         background-color: transparent;
-    
+
                         &:hover,
                         &:active,
                         &:focus {
@@ -130,14 +170,14 @@ footer {
         .phones {
             a {
                 color: inherit;
-                
+
                 &:hover,
                 &:focus,
                 &:active {
-                    color: rgba(white, .6);
+                    color: rgba(white, 0.6);
                 }
             }
-            
+
             h5 {
                 font-weight: 600;
             }
@@ -145,37 +185,36 @@ footer {
 
         .address {
             text-transform: uppercase;
-            font-size: .75rem;
+            font-size: 0.75rem;
             p {
                 margin: 0;
             }
 
             a {
                 color: inherit;
-                
+
                 &:hover,
                 &:focus,
                 &:active {
-                    color: rgba(white, .6);
+                    color: rgba(white, 0.6);
                 }
             }
-                
         }
     }
-    
+
     .footer-bottom {
-        background-color: #0A2F40;
+        background-color: #0a2f40;
         color: white;
 
-        font-size: .75rem;
+        font-size: 0.75rem;
 
         a {
             color: inherit;
-                
+
             &:hover,
             &:focus,
             &:active {
-                color: rgba(white, .6);
+                color: rgba(white, 0.6);
             }
         }
     }

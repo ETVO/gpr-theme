@@ -24,6 +24,18 @@ if (substr('$whatsapp_link', 0, 2) != '55') $whatsapp_link = '55' . $whatsapp_li
 
 ?>
 
+<div class="cookies-consent" id="cookiePopup">
+    <div class="text">
+        <p class="mb-2">
+        <b class="d-block">Este site utiliza cookies.</b>
+        Ao navegar, você está concordando com o armazenamento e uso de cookies em nosso site.
+        </p>
+    </div>
+    <div class="action">
+        <button class="btn btn-outline-primary" id="cookieAccept">aceitar</button>
+    </div>
+</div>
+
 <footer>
     <div class="footer-nav">
         <div class="container col-xl-8 d-flex py-3 flex-column flex-md-row">

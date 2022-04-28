@@ -9,7 +9,7 @@
 get_header();
 
 ?>
-<div class="inner-404 flex-fill d-flex">
+<div class="inner-404 flex-fill d-flex px-2 py-4">
 
     <div class="m-auto text-center">
         <h1 class="text-primary" style="font-weight: 700; font-size: 5rem;">404</h1>
