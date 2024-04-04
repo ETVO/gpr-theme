@@ -1,0 +1,144 @@
+.shoco-spe-long {
+    .strip {
+        .title {
+            font-size: 3.5rem;
+            line-height: 1;
+            font-weight: 700;
+            color: #108796;
+            letter-spacing: 4px;
+        }
+        .subtitle {
+            max-width: 150px;
+
+            font-size: 1rem;
+            font-weight: 700;
+
+            color: var(--bs-dark);
+
+            margin-bottom: 0.25rem;
+        }
+    }
+
+    .spe-content {
+        height: 60vh;
+        position: relative;
+        background-position: 0% 50%;
+
+        .overlay {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(-90deg, rgba(#1c4d5b, 1) 50%, rgba(#1c4d5b, 0) 65%);
+
+            .text {
+                max-width: 400px;
+                margin: auto;
+                margin-right: 0;
+                font-size: 0.9rem;
+                color: white;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 991.9px) {
+    .shoco-spe-long {
+    
+        .spe-content {
+            height: auto;
+            position: relative;
+
+            .image {
+                img {
+                    width: 100%;
+                    height: 250px;
+                    object-fit: cover;
+                }
+            }
+    
+            .overlay {
+                padding: 3rem 0;
+                position: relative;
+                background: #1c4d5b;
+    
+                .text {
+                    max-width: 400px;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+}
+
+.shoco-acompanhamento {
+    .content {
+        background-color: #195766;
+        display: flex;
+        .content-inner {
+            padding: 3rem 2rem;
+            max-width: 500px;
+            margin-top: auto;
+            margin-bottom: auto;
+
+            .title * {
+                font-weight: normal;
+            }
+
+            .text {
+                font-size: 0.9rem;
+            }
+
+            .action {
+                a {
+                    text-transform: uppercase;
+                    padding: 7px 14px;
+                    border: solid 2px var(--bs-primary);
+                    border-radius: 50rem;
+
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    letter-spacing: 1.6px;
+                }
+            }
+        }
+    }
+
+    .image {
+        img {
+            height: 250px;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+}
+
+@media all and (min-width: 992px) {
+    .shoco-acompanhamento {
+        .content {
+            .content-inner {
+                padding: 3rem 5rem;
+                margin-left: auto;
+            }
+        }
+
+        .image {
+            img {
+                height: 100%;
+            }
+        }
+    }
+}
+
+
+@media all and (max-width: 575.9px) {
+
+    .shoco-acompanhamento {
+        .content {
+            .content-inner {
+                padding: 2rem .75rem;
+                margin-left: auto;
+            }
+        }
+    }
+}

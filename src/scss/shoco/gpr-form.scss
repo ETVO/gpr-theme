@@ -1,0 +1,25 @@
+.shoco-gpr-form {
+    background-repeat: no-repeat;
+    background-position: center 35%;
+    background-size: cover;
+    background-attachment: scroll;
+    position: relative;
+
+    .wrap {
+        background: rgba(#0a2f40, 0.5);
+        
+        &.darker {
+            background: rgba(#0a2f40, 0.9);
+        }
+
+        .form-content {
+            background-color: white;
+            border-radius: 20px;
+
+            width: 450px;
+            max-width: 450px;
+
+            padding: 2.25rem 1.5rem;
+        }
+    }
+}

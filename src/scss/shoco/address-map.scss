@@ -1,0 +1,93 @@
+.shoco-address-map {
+    position: relative;
+
+    iframe {
+        width: 100% !important;
+        height: 400px;
+        object-position: right;
+        object-fit: cover;
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 200px;
+        max-width: 300px;
+        height: 100%;
+        background-color: rgba(#0A2F40, 0.9);        
+
+        padding: 2rem;
+
+        .logo {
+            svg, img {
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .address {
+            color: white;
+            font-size: .85rem;
+
+            p {
+                margin: 0;
+            }
+        }
+
+        .action {
+            a {
+                display: block;
+                border: solid 2px var(--bs-primary);
+                border-radius: 50rem;
+                font-size: .8rem;
+                text-transform: uppercase;
+                font-weight: 600;
+
+                letter-spacing: 1.5px;
+
+                padding: 5px 10px;
+
+                transition: background-color .2s;
+            }
+        }
+    }
+}
+
+@media all and (max-width:992px) {
+    .shoco-address-map {
+        .overlay {
+            left: 100px;
+        }
+    }
+}
+
+@media all and (max-width:767px) {
+    .shoco-address-map {
+
+        iframe {
+            height: 250px;
+        }
+
+        .overlay {
+            position: relative;
+            left: 0;
+            max-width: unset;
+            width: 100%;
+            height: auto;
+
+            padding: 2rem 1rem;
+
+            .logo {
+                text-align: center;
+                svg, img {
+                    
+                    max-width: 190px;
+                }
+            }
+
+            .address {
+                text-align: center;
+            }
+        }
+    }
+}
