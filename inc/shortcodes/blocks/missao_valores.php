@@ -24,7 +24,7 @@ function missao_valores($attrs)
         </div>
         <div class="col-12 col-lg-6">
           <div class="inner">
-            <h3>Valores:</h3>
+            <h3>Visão:</h3>
             <p><?= $valores ?></p>
           </div>
         </div>
